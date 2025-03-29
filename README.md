@@ -21,7 +21,7 @@ This project was developed as part of a university assignment to create a meanin
 ### 🎥 Demo Video
 
 Watch a demo of Aluel's Investigation Swift in action:  
-[Demo Video Link](https://www.canva.com/design/DAGjEGZZEtc/qrq_m5qKzdv_T5j89KdMmg/watch?utm_content=DAGjEGZZEtc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hab1200133f)
+[Demo Video Link]([https://www.canva.com/design/DAGjEGZZEtc/qrq_m5qKzdv_T5j89KdMmg/watch?utm_content=DAGjEGZZEtc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hab1200133f](https://youtu.be/4vsuTUt3u1w?si=YZR4D-byLpyqiJNH)
 
 ## 🛠️ Tech Stack
 
