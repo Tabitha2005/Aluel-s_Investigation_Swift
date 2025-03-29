@@ -1,6 +1,5 @@
 # Aluel's Investigation Swift
-
-![Aluel's Investigation Swift Banner](Aluel.webp)  
+ 
 *A platform to help you recover misplaced belongings, reunite found items with their rightful owners, and access emergency services.*
 
 ## 📖 Project Overview
