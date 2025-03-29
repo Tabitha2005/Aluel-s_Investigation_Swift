@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer - Aluel's Investigation Swift</title>
+    <!-- Add Favicon -->
+    <link rel="icon" href="./Aluel.webp" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="disclaimer-container">
+        <div class="disclaimer-header">
+            <span class="warning-icon">⚠️</span>
+            <h1>Disclaimer</h1>
+        </div>
+        
+        <div class="disclaimer-point">
+            <h4>Public Platform Warning</h4>
+            <p>Aluel's Investigation Swift <strong>does not garantee</strong> the safety or privacy of users. Use at your own risk.</p>
+        </div>
+        
+        <div class="disclaimer-point">
+            <h4>No Collection Service</h4>
+            <p>Aluel's Investigation Swift <strong>does not offer</strong> collection services for users who have lost items.</p>
+        </div>
+        
+        <div class="disclaimer-point">
+            <h4>Safety Tips</h4>
+            <ul>
+                <li>Be respectful of others</li>
+                <li>Be cautious of strangers</li>
+                <li>Be aware of your surroundings</li>
+                <li>Do not share personal information</li>
+            </ul>
+        </div>
+        
+        <div class="disclaimer-point">
+            <h4>Terms and Conditions</h4>
+            <p>By using Aluel's Investigation Swift, you agree to these terms and conditions.</p>
+        </div>
+        
+        <div class="form-check">
+            <input type="checkbox" id="acceptCheck" class="form-check-input">
+            <label for="acceptCheck">I accept the terms and conditions</label>
+        </div>
+        
+        <div class="text-center">
+            <button id="continueBtn" class="btn btn-success" disabled>Continue</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('acceptCheck').addEventListener('change', function() {
+            document.getElementById('continueBtn').disabled = !this.checked;
+        });
+        
+        document.getElementById('continueBtn').addEventListener('click', function() {
+            localStorage.setItem('disclaimerAccepted', 'true');
+            window.location.href = 'index.html';
+        });
+        
+        if (localStorage.getItem('disclaimerAccepted')) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

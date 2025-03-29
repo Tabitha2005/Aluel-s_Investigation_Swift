@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluel's Investigation Swift</title>
+    <!-- Add Favicon -->
+    <link rel="icon" href="./Aluel.webp" type="image/png">
+    <!-- Add Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f4f4f9; /* Light gray background for better readability */
+            color: #333; /* Darker text for contrast */
+        }
+        .navbar {
+            background-color: #ff6600; /* Orange navbar */
+        }
+        .navbar a {
+            color: #fff; /* White text for navbar links */
+        }
+        .navbar-toggler {
+            background-color: #cc5200; /* Darker orange for toggle button */
+        }
+        .about-section h1, .about-section h2, .about-section h3 {
+            color: #2c3e50; /* Darker headings for emphasis */
+        }
+        .portfolio-links a, .social-links a {
+            color: #ff6600; /* Orange links for portfolios and social media */
+        }
+        .portfolio-links a:hover, .social-links a:hover {
+            color: #cc5200; /* Darker orange on hover */
+        }
+        .footer {
+            background-color: #2c3e50; /* Dark footer */
+            color: #fff; /* White text in footer */
+        }
+        .footer a {
+            color: #ff6600; /* Orange footer links */
+        }
+        .footer a:hover {
+            color: #cc5200; /* Darker orange on hover */
+        }
+        .btn-danger {
+            background-color: #e74c3c; /* Red button for emergency AI */
+            border-color: #c0392b; /* Darker red border */
+        }
+        .btn-danger:hover {
+            background-color: #c0392b; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Aluel's Investigation Swift</a>
+            <div class="navbar-right">
+                <button class="navbar-toggler" type="button" aria-label="Toggle navigation" id="navbar-toggle">
+                    <svg class="menu-icon" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" fill="white"/>
+                    </svg>
+                </button>
+                <div class="navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="emergency-ai-toggle">Emergency AI</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="about-section">
+            <h1>About Me</h1>
+            <div class="about-content">
+                <h2>Meet the Creator</h2>
+                <p>Greetings! I am Aluel Tabitha Kuir Bior, a passionate software developer from South Sudan. With a strong foundation in computer science, I have embarked on a journey to create innovative solutions that harness the power of technology as well as artificial intelligence.</p>
+                <p>As a skilled full-stack developer, I specialize in creating dynamic and user-friendly web applications that blend the beauty of front-end design with the power of back-end development.</p>
+
+                <h3>My Expertise</h3>
+                <ul>
+                    <li>Proficient in HTML, CSS, JavaScript, and Python</li>
+                    <li>Familiarity with frameworks like React, Node.js, and Django</li>
+                </ul>
+
+                <h3>My Portfolio</h3>
+                <p>Take a look at my online portfolio to see some of my latest projects and contributions:</p>
+                <ul class="portfolio-links">
+                    <li><a href="[Your Online Portfolio Link]" target="_blank">Online Portfolio</a></li>
+                    <li><a href="https://tabitha2005.github.io/Responsive-Web-Design-Resume-Assignment/" target="_blank">GitHub (Personal Contributions)</a></li>
+                    <li><a href="[https://github.com/your-professional-github]" target="_blank">GitHub (Professional Contributions)</a></li>
+                    <li><a href="[https://www.behance.net/your-behance]" target="_blank">Behance Showcase</a></li>
+                </ul>
+
+                <h3>Connect with Me</h3>
+                <p>Stay connected! Follow me on social platforms to remain updated on my latest innovations and endeavors:</p>
+                <ul class="social-links">
+                    <li><a href="[https://www.instagram.com/your-instagram]" target="_blank">Instagram Profile</a></li>
+                    <li><a href="[https://www.linkedin.com/in/your-linkedin]" target="_blank">LinkedIn Profile</a></li>
+                </ul>
+            </div>
+
+            <div class="app-content">
+                <h2>About Aluel's Investigation Swift</h2>
+                <p>Aluel's Investigation Swift is meticulously designed to facilitate the recovery of misplaced belongings and the reunion of found items with their rightful owners. Whether you have lost your keys, wallet, or phone, or discovered someone else's possessions, this application streamlines the process with unparalleled efficiency. With a focus on user-centric design, the app integrates intuitive interfaces with robust functionalities to foster community connections and resolve everyday predicaments.</p>
+
+                <h3>Key Features of Aluel's Investigation Swift</h3>
+                <ul>
+                    <li><strong>Submit Items to Aluel's Investigation Swift:</strong> Effortlessly document items you have misplaced or discovered, complete with comprehensive descriptions, including title, date, location, and optional imagery.</li>
+                    <li><strong>Advanced Search Capabilities:</strong> Utilize keyword-based searches (e.g., "keys") to swiftly locate relevant entries in the database.</li>
+                    <li><strong>Enhanced Filtering Options:</strong> Refine your search by status ("lost" or "found") for greater precision.</li>
+                    <li><strong>Interactive Map Integration:</strong> Visualize item locations on an interactive map powered by Leaflet, enabling precise identification of where items were lost or found.</li>
+                    <li><strong>Contact Details:</strong> Each listing includes contact information (if provided) to facilitate direct communication with the poster.</li>
+                    <li><strong>Image Upload Support:</strong> Attach images of items to aid in their identification.</li>
+                    <li><strong>Responsive Interface:</strong> Access the application seamlessly across devices—desktop, tablet, or mobile.</li>
+                </ul>
+            </div>
+
+            <div class="eai-content">
+                <h2>Emergency AI: Your Safety Companion</h2>
+                <p>Aluel's Investigation Swift also incorporates a groundbreaking Emergency AI feature, engineered to deliver immediate assistance during critical scenarios. Whether you require urgent guidance or support, the Emergency AI is equipped to provide real-time solutions and resources.</p>
+
+                <h3>Features of the Emergency AI</h3>
+                <ul>
+                    <li><strong>Interactive Chat Assistance:</strong> Engage in real-time conversations with the AI to receive prompt advice during emergencies, such as identifying the appropriate agency to contact for medical aid or safety concerns.</li>
+                    <li><strong>Emergency Contact Access:</strong> Instantly retrieve local emergency numbers and services tailored to your geographical location.</li>
+                    <li><strong>Forthcoming Enhancements:</strong> Additional features are under development to further augment the AI's capabilities.</li>
+                    <li><strong>Personalized Safety Recommendations:</strong> Obtain actionable safety guidelines tailored to your specific circumstances, such as navigating crowded environments or natural disasters.</li>
+                    <li><strong>Location Sharing:</strong> Share your geographical coordinates with emergency contacts or services directly through the application (if enabled).</li>
+                    <li><strong>Comprehensive Resource Library:</strong> Access an extensive repository of resources, including first aid protocols, survival strategies, and mental health support.</li>
+                    <li><strong>Voice Command Integration (Future Feature):</strong> Plans are underway to incorporate voice-activated commands for hands-free operation during high-stress situations.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Emergency AI Modal -->
+    <div class="modal" id="emergencyAiModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header emergency-header">
+                    <h5 class="modal-title">Emergency AI</h5>
+                    <button type="button" class="modal-close" id="emergency-ai-close">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="chat-body" id="emergency-ai-messages">
+                        <div class="message bot-message">
+                            Hello! I can help you find emergency numbers or addresses in Rwanda. Ask me something like "police number" or "hospital in Kigali".
+                        </div>
+                    </div>
+                    <div class="chat-footer">
+                        <div class="input-group">
+                            <input type="text" class="form-input" id="emergency-ai-input" placeholder="Type your query...">
+                            <button type="button" class="btn btn-danger" id="emergency-ai-submit">Send</button>
+                        </div>
+                        <div id="emergency-ai-input-error" class="invalid-feedback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Aluel's Investigation Swift by Aluel Tabitha. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="[https://www.instagram.com/your-instagram]" target="_blank">Instagram</a></li>
+                <li><a href="[https://www.linkedin.com/in/your-linkedin]" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        if (!localStorage.getItem('disclaimerAccepted')) {
+            window.location.href = 'disclaimer.html';
+        }
+
+        // Fallback navbar toggle functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbarToggle = document.getElementById('navbar-toggle');
+            const navbarNav = document.getElementById('navbarNav');
+
+            if (navbarToggle && navbarNav) {
+                navbarToggle.addEventListener('click', () => {
+                    navbarNav.classList.toggle('show');
+                });
+            }
+        });
+    </script>
+    <!-- Add Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="./dist/bundle.js"></script>
+    <script type="module" src="./eai.js"></script>
+    <script src="./contacts.js"></script>
+</body>
+</html>
