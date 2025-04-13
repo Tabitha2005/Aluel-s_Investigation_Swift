@@ -18,6 +18,14 @@ This project was developed as part of a university assignment to create a meanin
 - **Error Handling**: Comprehensive error handling for API failures, with user-friendly feedback via alerts and chat messages.
 - **Performance Optimization**: API caching for geocoding requests to reduce load times and respect rate limits.
 
+### Acces the deployed website
+URL: http://www.alueltabby.tech/
+
+
+
+
+
+
 ### 🎥 Demo Video
 
 Watch a demo of Aluel's Investigation Swift in action:  
